@@ -4,7 +4,7 @@ extends Node
 # Mods are loaded from lowest to highest priority, default is 0
 const MOD_PRIORITY = -10
 # Name of the mod, used for writing to the logs
-const MOD_NAME = "MoreMinerals"
+const MOD_NAME = "Hev's More Minerals"
 const MOD_VERSION_MAJOR = 1
 const MOD_VERSION_MINOR = 4
 const MOD_VERSION_BUGFIX = 1
@@ -24,17 +24,17 @@ func _init(modLoader = ModLoader):
 	var self_check = load(self_directory + "mod_checker_script.tscn").instance()
 	add_child(self_check)
 #	Install our script extensions
-	initAsteroids()
+#	initAsteroids()
 	initHUD()
-	initShip()
+#	initShip()
 	initElse()
-
+#	installScriptExtension("new_script.gd")
 	l("Initialized")
 
 
-func initAsteroids():
-	installScriptExtension("asteroids/mineral.gd")
-	installScriptExtension("AsteroidSpawner.gd")
+#func initAsteroids():
+#	installScriptExtension("asteroids/mineral.gd")
+#	installScriptExtension("AsteroidSpawner.gd")
 
 func initHUD():
 	replaceScene("hud/components/MineralSystemLabel.tscn")

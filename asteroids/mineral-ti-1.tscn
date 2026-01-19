@@ -1,16 +1,16 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://MoreMinerals/asteroids/assets/mineral.material" type="Material" id=1]
+[ext_resource path="res://Hevs-More-Minerals/asteroids/assets/mineral.material" type="Material" id=1]
 [ext_resource path="res://lights/distant-proxy.png" type="Texture" id=2]
 [ext_resource path="res://asteroids/mineral.gd" type="Script" id=3]
 
 [sub_resource type="StreamTexture" id=2]
 flags = 4
-load_path = "res://MoreMinerals/asteroids/assets/minerals-c.png.stex"
+load_path = "res://Hevs-More-Minerals/asteroids/assets/minerals-c.png.stex"
 
 [sub_resource type="StreamTexture" id=3]
 flags = 4
-load_path = "res://MoreMinerals/asteroids/assets/minerals-n.png.stex"
+load_path = "res://Hevs-More-Minerals/asteroids/assets/minerals-n.png.stex"
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 10.4048

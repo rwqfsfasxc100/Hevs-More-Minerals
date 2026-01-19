@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://MoreMinerals/asteroids/mineral-crs-6.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Hevs-More-Minerals/asteroids/mineral-crs-6.tscn" type="PackedScene" id=1]
 
 [node name="Crs7" instance=ExtResource( 1 )]
 purity = 0.88

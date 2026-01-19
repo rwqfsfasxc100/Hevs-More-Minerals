@@ -2,8 +2,8 @@ extends "res://hud/SystemMineralList.gd"
 
 
 #Quick and dirty fix to prevent geologist tuning from spilling off the side
-func _ready():
-	self.rect_scale = Vector2(.8, .8)
+# func _ready():
+	# self.rect_scale = Vector2(.8, .8)
 
 
 #Toggles the mineral selection of every equipment
@@ -37,9 +37,10 @@ func toggleRow(b):
 #	For the number of minerals there are plus H2O and UNMARKED
 	for i in (CurrentGame.traceMinerals.size()+2):
 #	Get the node
-		var n:Button = get_child(rowStart+i+1)
+		var n = get_child(rowStart+i+1)
+		var nclass = n.get_class()
 #	if the button is not disabled
-		if !n.disabled:
+		if nclass == "CheckButton" and !n.disabled:
 #		If the value has not been set yet
 			if val == null:
 #			Set the value
