@@ -1,0 +1,36 @@
+[mod_information]
+
+name="Hev's More Minerals"
+id="hev.MoreMinerals"
+description="MOREMINERALS_MOD_DESCRIPTION"
+brief="MOREMINERALS_MOD_BRIEF"
+author="__hev"
+credits=["Tyelan Sin - original mod request","Za'krin - original mod this is built off of"]
+
+[version]
+
+version_major=1
+version_minor=4
+version_bugfix=1
+version_metadata=""
+
+[tags]
+
+TAG_ALLOW_ACHIEVEMENTS={"type":"bool","value":true}
+TAG_OVERHAUL={"type":"bool","value":true}
+TAG_QOL={"type":"bool","value":true}
+TAG_ADDS_GAMEPLAY_MECHANICS={"type":"array","value":["Adds lots of new minerals"]}
+
+[languages]
+
+en="100%"
+
+[links]
+
+HEVLIB_DISCORD={"URL":"https://discord.com/channels/426287934870781952/1239854400810516511"}
+HEVLIB_DONATIONS={"URL":"https://ko-fi.com/00hev"}
+HEVLIB_BUGREPORTS={"URL":"https://forms.gle/vUoarawnYjy3hXJi9"}
+
+[manifest_definitions]
+
+manifest_version=2.2
