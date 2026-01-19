@@ -12,6 +12,9 @@
 
 - 20 new Obonto Trades!
 
+- Mass Geologist filter toggles
+  - Press the name of the equipment to turn all toggles on or off in one click.
+
 - Multiple minerals per chunk!
 
   - Enabled in HevLib rather than through this mod.
