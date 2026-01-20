@@ -27,7 +27,7 @@ var this_mod_name : String = "More Minerals"
 # Setting INF for the max major version and -INF for the min major version will act as standard operators and mean that no maximum or no minimum is set respectively
 # 
 var min_version_major : int = 1 # Setting this to INF will mean no min version is checked
-var min_version_minor : int = 9
+var min_version_minor : int = 11
 var min_version_bugfix : int = 2
 
 var max_version_major : int = INF # Setting this to INF will mean no max version is checked

@@ -18,15 +18,15 @@ func toggleColumn(m):
 #	For evey child node
 	for nr in range(count):
 #	Get the node
-		if get_child(nr) != Button:
-			continue
-		var n:Button = get_child(nr)
-#	Check if the node is in the correct column
-		var column = (nr % columns) == idx
-#	If it is, and is not disabled
-		if column and !n.disabled:
-#		Set it to the opposite of the value
-			n.pressed = !val
+		var n = get_child(nr)
+		var nclass = n.get_class()
+		if nclass == "CheckButton":
+#		Check if the node is in the correct column
+			var column = (nr % columns) == idx
+#		If it is, and is not disabled
+			if column and !n.disabled:
+#			Set it to the opposite of the value
+				n.pressed = !val
 
 
 #Toggles all minerals for one equipment
