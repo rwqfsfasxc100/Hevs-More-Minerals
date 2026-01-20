@@ -35,3 +35,4 @@ HEVLIB_BUGREPORTS={"URL":"https://forms.gle/vUoarawnYjy3hXJi9"}
 
 manifest_version=2.2
 manifest_url="https://raw.githubusercontent.com/rwqfsfasxc100/Hevs-More-Minerals/main/Mod.manifest"
+changelog_path="changelog.txt"

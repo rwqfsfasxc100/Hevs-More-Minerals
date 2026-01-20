@@ -1,0 +1,8 @@
+[1.4.2]
+
+1="* Fixed issue where pressing the mineral name button in the geologist tab would not toggle the column"
+2="* Added changelog.txt"
+
+[1.4.1]
+
+1="* Initial release"
