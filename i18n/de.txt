@@ -1,0 +1,51 @@
+locale|de
+
+SYSTEM_CARGO_PROCESSED|Verarbeiter Frachtraum
+
+MOREMINERALS_MOD_DESCRIPTION|Fügt 20+ neue Mineralien zu den Ringen hinzu, alle mit korrekten Verarbeitungen für die Obonto-Habitate und verarbeitete Frachtraum-Modifikationen. \n\nFür die ursprüngliche Multi-Erz-Möglichkeit aktiviere die equivalente Option in der Hevlib.
+
+MOREMINERALS_MOD_BRIEF|Fügt einen Haufen neuer Mineralien in den Ringen hinzu!
+
+-Obonto Trades-
+DIALOG_HABITAT_NEED_MG|Willkommen {target/shipname}. Haben Sie verarbeitetes Magnesium zum handeln?
+DIALOG_HABITAT_NEED_TI|Willkommen {target/shipname}. Haben Sie verarbeitetes Titan zum handeln?
+DIALOG_HABITAT_NEED_NI|Willkommen {target/shipname}. Haben Sie verarbeitetes Nickel zum handeln?
+DIALOG_HABITAT_NEED_CU|Willkommen {target/shipname}. Haben Sie verarbeitetes Kupfer zum handeln?
+DIALOG_HABITAT_NEED_MG_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Magnesium. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_TI_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Titan. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_NI_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Nickel. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_CU_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Kupfer. Wir zahlen auch extra.
+
+
+DIALOG_HABITAT_NEED_FO|Willkommen {target/shipname}. Haben Sie verarbeitetes Forsterit zum handeln?
+DIALOG_HABITAT_NEED_FO_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Forsterit. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_FA|Willkommen {target/shipname}. Haben Sie verarbeitetes Fayalit zum handeln?
+DIALOG_HABITAT_NEED_FA_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Fayalit. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_DI|Willkommen {target/shipname}. Haben Sie verarbeitetes Diopsid zum handeln?
+DIALOG_HABITAT_NEED_DI_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Diopsid. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_JD|Willkommen {target/shipname}. Haben Sie verarbeitetes Jadeit zum handeln?
+DIALOG_HABITAT_NEED_JD_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Jadeit. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_JHN|Willkommen {target/shipname}. Haben Sie verarbeitetes Johannsenit zum handeln?
+DIALOG_HABITAT_NEED_JHN_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Johannsenit. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_KOS|Willkommen {target/shipname}. Haben Sie verarbeitetes Kosmochlor zum handeln?
+DIALOG_HABITAT_NEED_KOS_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Kosmochlor. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_NMS|Willkommen {target/shipname}. Haben Sie verarbeitetes Namansilit zum handeln?
+DIALOG_HABITAT_NEED_NMS_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Namansilit. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_NTA|Willkommen {target/shipname}. Haben Sie verarbeitetes Natalyit zum handeln?
+DIALOG_HABITAT_NEED_NTA_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Natalyit. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_SPD|Willkommen {target/shipname}. Haben Sie verarbeitetes Spodumen zum handeln?
+DIALOG_HABITAT_NEED_SPD_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Spodumen. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_EN|Willkommen {target/shipname}. Haben Sie verarbeitetes Enstatit zum handeln?
+DIALOG_HABITAT_NEED_EN_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Enstatit. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_QZ|Willkommen {target/shipname}. Haben Sie verarbeitetes Quarz zum handeln?
+DIALOG_HABITAT_NEED_QZ_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Quarz. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_CRS|Willkommen {target/shipname}. Haben Sie verarbeitetes Cristobalit zum handeln?
+DIALOG_HABITAT_NEED_CRS_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Cristobalit. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_TRD|Willkommen {target/shipname}. Haben Sie verarbeitetes Tridymit zum handeln?
+DIALOG_HABITAT_NEED_TRD_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Tridymit. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_AB|Willkommen {target/shipname}. Haben Sie verarbeitetes Albit zum handeln?
+DIALOG_HABITAT_NEED_AB_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Albit. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_AN|Willkommen {target/shipname}. Haben Sie verarbeitetes Anorthit zum handeln?
+DIALOG_HABITAT_NEED_AN_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Anorthit. Wir zahlen auch extra.
+DIALOG_HABITAT_NEED_OR|Willkommen {target/shipname}. Haben Sie verarbeitetes Orthoklas zum handeln?
+DIALOG_HABITAT_NEED_OR_DESPERATE|Ich bin froh Sie zu sehen, {target/shipname}, wir brauchen wirklich etwas verarbeitetes Orthoklas. Wir zahlen auch extra.

@@ -60,6 +60,7 @@ func initElse():
 func _ready():
 #	Add our translations
 	updateTL("i18n/en.txt", "|")
+	updateTL("i18n/de.txt", "|")
 
 	l("Ready")
 
