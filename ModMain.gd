@@ -7,7 +7,7 @@ const MOD_PRIORITY = -10
 const MOD_NAME = "Hev's More Minerals"
 const MOD_VERSION_MAJOR = 1
 const MOD_VERSION_MINOR = 4
-const MOD_VERSION_BUGFIX = 2
+const MOD_VERSION_BUGFIX = 3
 const MOD_VERSION_METADATA = ""
 
 # Path of the mod folder, automatically generated on runtime

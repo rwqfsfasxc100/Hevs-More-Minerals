@@ -5,13 +5,13 @@ id="hev.MoreMinerals"
 description="MOREMINERALS_MOD_DESCRIPTION"
 brief="MOREMINERALS_MOD_BRIEF"
 author="__hev"
-credits=["Tyelan Sin - original mod request","Za'krin - original mod this is built off of"]
+credits=["   --- Contributors ---   ","Tyelan Sin - original mod request","Za'krin - original mod this is built off of","Hedrauta - German translations","   --- Supporters ---   ","GAZI - supporter (ko-fi)"]
 
 [version]
 
 version_major=1
 version_minor=4
-version_bugfix=2
+version_bugfix=3
 version_metadata=""
 
 [tags]
