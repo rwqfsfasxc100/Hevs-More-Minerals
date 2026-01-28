@@ -33,11 +33,14 @@ func getTotalProcessedCargoCapacity()->float:
 	else:
 		return .getTotalProcessedCargoCapacity()
 
-
 # Get a ship's processed cargo capacity for a single mineral
 func getProcessedCargoCapacity(mineral:String)->float:
 	removeSchrodingersIron()
-	if processedCargoStorageType == "divided":
+	if setup:
+		respect_limits()
+	else:
+		Tool.deferCallInPhysics(self,"respect_limits",[true])
+	if setup and processedCargoStorageType == "divided":
 		match cargoBehavior:
 
 			"default":
@@ -74,6 +77,18 @@ func getProcessedCargoCapacity(mineral:String)->float:
 	else:
 		return .getProcessedCargoCapacity(mineral)
 
+func respect_limits(postready = false):
+	if cargoBehavior == "limited" or cargoBehavior == "dynamic":
+		configMutex.lock()
+		var entries = shipConfig.processedCargo.keys()
+		if postready:
+			randomize()
+			entries.shuffle()
+		for i in range(baseMineralCount):
+			entries.pop_front()
+		for i in entries:
+			shipConfig.processedCargo.erase(i)
+		configMutex.unlock()
 
 # Remove any processed cargo listings if it has 0 or less of that mineral.
 # This prevents weird bugs with some custom cargo implementations, as the ship would start with 0 Iron in the hold.
