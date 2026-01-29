@@ -16,8 +16,8 @@ func _ready():
 	extendedMineralCount = float(CurrentGame.traceMinerals.size())
 	cargoCapacityModifier = (baseMineralCount / extendedMineralCount)
 
-	if playerControlled:
-		add_child(cargoScene.instance())
+#	if playerControlled:
+#		add_child(cargoScene.instance())
 
 
 # Get a ship's total processed cargo capacity

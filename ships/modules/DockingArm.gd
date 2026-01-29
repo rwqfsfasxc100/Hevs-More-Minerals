@@ -1,7 +1,7 @@
 extends "res://ships/modules/DockingArm.gd"
 
 #Used to determine if this is a possible valid container
-const IS_ARM = true
+#const IS_ARM = true
 #What minerals the ship is trying to purge
 var dumpFilter = []
 #How fast we can transfer minerals

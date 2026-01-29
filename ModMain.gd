@@ -26,7 +26,7 @@ func _init(modLoader = ModLoader):
 #	Install our script extensions
 #	initAsteroids()
 	initHUD()
-	initShip()
+#	initShip()
 	initElse()
 #	installScriptExtension("new_script.gd")
 	l("Initialized")

@@ -108,7 +108,7 @@ func getSystems(systems):
 		var s = systems[id].ref
 
 		if "system" in s:
-			if "IS_ARM" in s.system:
+			if "dumpFilter" in s.system:
 				containers.append(s.system)
 
 	setFilters()
