@@ -11,7 +11,7 @@ credits=["   --- Contributors ---   ","Tyelan Sin - original mod request","Za'kr
 
 version_major=1
 version_minor=4
-version_bugfix=3
+version_bugfix=4
 version_metadata=""
 
 [tags]
@@ -29,6 +29,7 @@ de="100%"
 [links]
 
 HEVLIB_DISCORD={"URL":"https://discord.com/channels/426287934870781952/1239854400810516511"}
+HEVLIB_GITHUB={"URL":"https://github.com/rwqfsfasxc100/Hevs-More-Minerals"}
 HEVLIB_DONATIONS={"URL":"https://ko-fi.com/00hev"}
 HEVLIB_BUGREPORTS={"URL":"https://forms.gle/vUoarawnYjy3hXJi9"}
 
