@@ -13,20 +13,22 @@ func toggleColumn(m):
 #	Get how many child nodes we have
 	var count = get_child_count()
 #	Get the state of the first filter button for that mineral
-	var val = get_child(idx + columns).pressed
+	var child = get_child(idx + columns)
+	
+	if child is CheckButton:
+		var val = child.pressed
 
-#	For evey child node
-	for nr in range(count):
-#	Get the node
-		var n = get_child(nr)
-		var nclass = n.get_class()
-		if nclass == "CheckButton":
-#		Check if the node is in the correct column
-			var column = (nr % columns) == idx
-#		If it is, and is not disabled
-			if column and !n.disabled:
-#			Set it to the opposite of the value
-				n.pressed = !val
+	#	For evey child node
+		for nr in range(count):
+	#	Get the node
+			var n = get_child(nr)
+			if n is CheckButton:
+	#		Check if the node is in the correct column
+				var column = (nr % columns) == idx
+	#		If it is, and is not disabled
+				if column and !n.disabled:
+	#			Set it to the opposite of the value
+					n.pressed = !val
 
 
 #Toggles all minerals for one equipment
@@ -38,9 +40,9 @@ func toggleRow(b):
 	for i in (CurrentGame.traceMinerals.size()+2):
 #	Get the node
 		var n = get_child(rowStart+i+1)
-		var nclass = n.get_class()
+		
 #	if the button is not disabled
-		if nclass == "CheckButton" and !n.disabled:
+		if n is CheckButton and !n.disabled:
 #		If the value has not been set yet
 			if val == null:
 #			Set the value
