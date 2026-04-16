@@ -1,295 +1,465 @@
 extends Node
 
-const MINERAL_FO = {
-	"name":"Fo",
+const Forsterite = {
+	"name":"Mg2SiO4",
 	"price":2.8,
 	"color":Color("#3d6c06"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-fo-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-fo-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-fo-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-fo-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-fo-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-fo-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-fo-7.tscn",
+	"handle":"recolor",
+	"base":"be",
+	"mass":20.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.52,
+		2:0.58,
+		3:0.64,
+		4:0.71,
+		5:0.77,
+		6:0.83,
+		7:0.89
+	},
+	
 }
-const MINERAL_FA = {
-	"name":"Fa",
+const Fayalite = {
+	"name":"Fe2SiO4",
 	"price":2.6,
 	"color":Color("#875745"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-fa-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-fa-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-fa-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-fa-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-fa-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-fa-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-fa-7.tscn",
+	"handle":"recolor",
+	"base":"w",
+	"mass":25.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.51,
+		2:0.56,
+		3:0.61,
+		4:0.66,
+		5:0.72,
+		6:0.78,
+		7:0.84
+	},
+	
 }
-const MINERAL_DI = {
-	"name":"Di",
+const Diopside = {
+	"name":"MgCaSi2O6",
 	"price":4.6,
 	"color":Color("#a0c702"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-di-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-di-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-di-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-di-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-di-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-di-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-di-7.tscn",
+	"handle":"recolor",
+	"base":"pd",
+	"mass":18.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.53,
+		2:0.58,
+		3:0.64,
+		4:0.69,
+		5:0.75,
+		6:0.81,
+		7:0.86
+	},
+	
 }
-const MINERAL_JD = {
-	"name":"Jd",
+const Jadeite = {
+	"name":"NaAlSi2O6",
 	"price":5.1,
 	"color":Color("#73c9a0"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-jd-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-jd-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-jd-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-jd-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-jd-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-jd-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-jd-7.tscn",
+	"handle":"recolor",
+	"base":"pd",
+	"mass":15.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.47,
+		2:0.53,
+		3:0.59,
+		4:0.65,
+		5:0.71,
+		6:0.77,
+		7:0.83
+	},
+	
 }
-const MINERAL_JHN = {
-	"name":"Jhn",
+const Johannsenite = {
+	"name":"CaMn2Si2O6",
 	"price":4.9,
 	"color":Color("#9fc2b4"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-jhn-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-jhn-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-jhn-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-jhn-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-jhn-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-jhn-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-jhn-7.tscn",
+	"handle":"recolor",
+	"base":"pd",
+	"mass":23.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.48,
+		2:0.54,
+		3:0.6,
+		4:0.66,
+		5:0.72,
+		6:0.78,
+		7:0.84
+	},
+	
 }
-const MINERAL_KOS = {
-	"name":"Kos",
+const Kosmochlor = {
+	"name":"NaCr3Si2O6",
 	"price":7.3,
 	"color":Color("#2f4737"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-kos-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-kos-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-kos-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-kos-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-kos-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-kos-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-kos-7.tscn",
+	"handle":"recolor",
+	"base":"pd",
+	"mass":14.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.46,
+		2:0.52,
+		3:0.58,
+		4:0.64,
+		5:0.7,
+		6:0.76,
+		7:0.82
+	},
+	
 }
-const MINERAL_NMS = {
-	"name":"Nms",
+const Namansilite = {
+	"name":"NaMn3Si2O6",
 	"price":4.8,
 	"color":Color("#934d55"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-nms-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-nms-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-nms-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-nms-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-nms-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-nms-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-nms-7.tscn",
+	"handle":"recolor",
+	"base":"fe",
+	"mass":21.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.49,
+		2:0.55,
+		3:0.61,
+		4:0.67,
+		5:0.73,
+		6:0.79,
+		7:0.85
+	},
+	
 }
-const MINERAL_NTA = {
-	"name":"Nta",
+const Natalyite = {
+	"name":"NaV3Si2O6",
 	"price":7.4,
 	"color":Color("#535353"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-nta-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-nta-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-nta-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-nta-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-nta-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-nta-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-nta-7.tscn",
+	"handle":"recolor",
+	"base":"v",
+	"mass":16.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.45,
+		2:0.51,
+		3:0.57,
+		4:0.63,
+		5:0.69,
+		6:0.75,
+		7:0.81
+	},
+	
 }
-const MINERAL_SPD = {
-	"name":"Spd",
+const Spodumene = {
+	"name":"LiAl(SiO3)2",
 	"price":15.8,
 	"color":Color("#829aa6"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-spd-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-spd-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-spd-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-spd-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-spd-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-spd-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-spd-7.tscn",
+	"handle":"recolor",
+	"base":"v",
+	"mass":12.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.44,
+		2:0.5,
+		3:0.56,
+		4:0.62,
+		5:0.68,
+		6:0.74,
+		7:0.8
+	},
+	
 }
-const MINERAL_EN = {
-	"name":"En",
+const Enstatite = {
+	"name":"MgSiO3",
 	"price":2.4,
 	"color":Color("#cb7c2e"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-en-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-en-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-en-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-en-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-en-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-en-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-en-7.tscn",
+	"handle":"recolor",
+	"base":"w",
+	"mass":19.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.48,
+		2:0.54,
+		3:0.6,
+		4:0.66,
+		5:0.72,
+		6:0.78,
+		7:0.84
+	},
+	
 }
-const MINERAL_QZ = {
-	"name":"Qz",
+const Quartz = {
+	"name":"SiO2",
 	"price":3.0,
 	"color":Color("#f3fcfc"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-qz-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-qz-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-qz-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-qz-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-qz-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-qz-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-qz-7.tscn",
+	"handle":"recolor",
+	"base":"be",
+	"mass":24.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.3,
+		2:0.38,
+		3:0.46,
+		4:0.54,
+		5:0.62,
+		6:0.7,
+		7:0.78
+	},
+	
 }
-const MINERAL_CRS = {
-	"name":"Crs",
+const Cristobalite = {
+	"name":"SiO2 (Crs)",
 	"price":6.2,
 	"color":Color("#dafcfc"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-crs-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-crs-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-crs-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-crs-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-crs-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-crs-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-crs-7.tscn",
+	"handle":"recolor",
+	"base":"be",
+	"mass":22.0,
+	"filler":"H2O",
+	"min_scale":0.5,
+	"max_scale":1.0,
+	"purity":{
+		1:0.4,
+		2:0.48,
+		3:0.56,
+		4:0.64,
+		5:0.72,
+		6:0.8,
+		7:0.88
+	},
+
 }
-const MINERAL_TRD = {
-	"name":"Trd",
+const Tridymite = {
+	"name":"SiO2 (Trd)",
 	"price":9.5,
 	"color":Color("#c0d7ed"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-trd-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-trd-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-trd-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-trd-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-trd-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-trd-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-trd-7.tscn",
+	"handle":"recolor",
+	"base":"be",
+	"mass":20.0,
+	"filler":"H2O",
+	"min_scale":0.35,
+	"max_scale":0.75,
+	"purity":{
+		1:0.5,
+		2:0.58,
+		3:0.66,
+		4:0.74,
+		5:0.82,
+		6:0.9,
+		7:0.98
+	},
+
 }
-const MINERAL_AB = {
-	"name":"Ab",
+const Albite = {
+	"name":"NaAlSi3O8",
 	"price":6.7,
 	"color":Color("#bcb29c"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-ab-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-ab-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-ab-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-ab-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-ab-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-ab-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-ab-7.tscn",
+	"handle":"recolor",
+	"base":"pt",
+	"mass":17.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.35,
+		2:0.42,
+		3:0.49,
+		4:0.56,
+		5:0.63,
+		6:0.7,
+		7:0.77
+	},
+	
 }
-const MINERAL_AN = {
-	"name":"An",
+const Anorthite = {
+	"name":"CaAl2Si2O8",
 	"price":7.9,
 	"color":Color("#eb864d"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-an-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-an-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-an-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-an-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-an-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-an-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-an-7.tscn",
+	"handle":"recolor",
+	"base":"v",
+	"mass":26.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.38,
+		2:0.45,
+		3:0.52,
+		4:0.59,
+		5:0.66,
+		6:0.73,
+		7:0.8
+	},
+	
 }
-const MINERAL_OR = {
-	"name":"Or",
+const Orthoclase = {
+	"name":"KAlSi3O8",
 	"price":6.6,
 	"color":Color("#c5b0a9"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-or-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-or-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-or-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-or-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-or-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-or-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-or-7.tscn",
+	"handle":"recolor",
+	"base":"fe",
+	"mass":28.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.34,
+		2:0.41,
+		3:0.48,
+		4:0.55,
+		5:0.62,
+		6:0.69,
+		7:0.76
+	},
+	
 }
-const MINERAL_AU = {
+
+const Gold = {
 	"name":"Au",
 	"price":8.2,
 	"color":Color("#e6cf00"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-au-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-au-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-au-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-au-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-au-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-au-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-au-7.tscn",
+	"handle":"recolor",
+	"base":"w",
+	"mass":12.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.05,
+		2:0.15,
+		3:0.25,
+		4:0.35,
+		5:0.45,
+		6:0.55,
+		7:0.65
+	},
+	
 }
-const MINERAL_CU = {
+const Copper = {
 	"name":"Cu",
 	"price":1.6,
 	"color":Color("#d48237"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-cu-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-cu-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-cu-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-cu-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-cu-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-cu-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-cu-7.tscn",
+	"handle":"recolor",
+	"base":"fe",
+	"mass":27.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.45,
+		2:0.5,
+		3:0.55,
+		4:0.6,
+		5:0.65,
+		6:0.7,
+		7:0.75
+	},
+	
 }
-const MINERAL_MG = {
+const Magnesium = {
 	"name":"Mg",
 	"price":0.8,
 	"color":Color("#5DA87C"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-mg-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-mg-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-mg-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-mg-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-mg-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-mg-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-mg-7.tscn",
+	"handle":"recolor",
+	"base":"pt",
+	"mass":12.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.7,
+		2:0.74,
+		3:0.78,
+		4:0.82,
+		5:0.86,
+		6:0.9,
+		7:0.94
+	},
+	
 }
-const MINERAL_NI = {
+const Nickel = {
 	"name":"Ni",
 	"price":1.1,
 	"color":Color("#ccc3a7"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-ni-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-ni-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-ni-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-ni-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-ni-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-ni-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-ni-7.tscn",
+	"handle":"recolor",
+	"base":"pt",
+	"mass":31.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.5,
+		2:0.54,
+		3:0.58,
+		4:0.62,
+		5:0.66,
+		6:0.7,
+		7:0.74
+	},
+	
 }
-const MINERAL_RE = {
+const Rhenium = {
 	"name":"Re",
 	"price":16.3,
 	"color":Color("#5E5E5E"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-re-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-re-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-re-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-re-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-re-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-re-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-re-7.tscn",
+	"handle":"recolor",
+	"base":"fe",
+	"mass":25.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.08,
+		2:0.1,
+		3:0.13,
+		4:0.17,
+		5:0.22,
+		6:0.28,
+		7:0.35
+	},
+	
 }
-const MINERAL_TI = {
+const Titanium = {
 	"name":"Ti",
 	"price":4.3,
 	"color":Color("#9797c2"),
-	"handle":"scenes",
-	"ore_1":"res://Hevs-More-Minerals/asteroids/mineral-ti-1.tscn",
-	"ore_2":"res://Hevs-More-Minerals/asteroids/mineral-ti-2.tscn",
-	"ore_3":"res://Hevs-More-Minerals/asteroids/mineral-ti-3.tscn",
-	"ore_4":"res://Hevs-More-Minerals/asteroids/mineral-ti-4.tscn",
-	"ore_5":"res://Hevs-More-Minerals/asteroids/mineral-ti-5.tscn",
-	"ore_6":"res://Hevs-More-Minerals/asteroids/mineral-ti-6.tscn",
-	"ore_7":"res://Hevs-More-Minerals/asteroids/mineral-ti-7.tscn",
+	"handle":"recolor",
+	"base":"v",
+	"mass":7.0,
+	"filler":"H2O",
+	"min_scale":0.75,
+	"max_scale":1.0,
+	"purity":{
+		1:0.62,
+		2:0.66,
+		3:0.72,
+		4:0.78,
+		5:0.84,
+		6:0.9,
+		7:0.96
+	},
+	
 }
-#const MINERAL_DD = {
-#	"name":"Dd",
-#	"price":6.9,
-#	"color":Color("#696969"),
-#	"handle":"recolor",
-#	"base":"v"
-#}
