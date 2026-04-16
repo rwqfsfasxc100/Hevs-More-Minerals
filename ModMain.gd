@@ -24,17 +24,11 @@ func _init(modLoader = ModLoader):
 	var self_check = load(self_directory + "mod_checker_script.tscn").instance()
 	add_child(self_check)
 #	Install our script extensions
-#	initAsteroids()
 	initHUD()
-#	initShip()
+	initShip()
 	initElse()
-#	installScriptExtension("new_script.gd")
 	l("Initialized")
 
-
-#func initAsteroids():
-#	installScriptExtension("asteroids/mineral.gd")
-#	installScriptExtension("AsteroidSpawner.gd")
 
 func initHUD():
 	replaceScene("hud/components/MineralSystemLabel.tscn")
@@ -43,7 +37,7 @@ func initHUD():
 
 func initShip():
 	installScriptExtension("ships/modules/DockingArm.gd")
-	installScriptExtension("ships/modules/MineralProcessingUnit.gd")
+#	installScriptExtension("ships/modules/MineralProcessingUnit.gd")
 	installScriptExtension("ships/ship-ctrl.gd")
 	
 
@@ -59,8 +53,8 @@ func initElse():
 #Do stuff on ready 
 func _ready():
 #	Add our translations
-	updateTL("i18n/en.txt", "|")
-	updateTL("i18n/de.txt", "|")
+#	updateTL("i18n/en.txt", "|")
+#	updateTL("i18n/de.txt", "|")
 
 	l("Ready")
 

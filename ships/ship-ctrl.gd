@@ -6,8 +6,8 @@ const baseMineralCount = 6.0
 var extendedMineralCount = 6.0
 var cargoCapacityModifier = 1.0
 
-var cargoBehavior = "limited" #[default, reduced, limited, dynamic]
-var maxCargoTypes = 6 #For use with "limited" and "dynamic" cargo behaviors
+var cargoBehavior = "MOREMINERALS_CARGO_BEHAVIOUR_LIMITED" #[MOREMINERALS_CARGO_BEHAVIOUR_DEFAULT, MOREMINERALS_CARGO_BEHAVIOUR_REDUCED, MOREMINERALS_CARGO_BEHAVIOUR_LIMITED, MOREMINERALS_CARGO_BEHAVIOUR_DYNAMIC]
+var maxCargoTypes = 6 #For use with "MOREMINERALS_CARGO_BEHAVIOUR_LIMITED" and "MOREMINERALS_CARGO_BEHAVIOUR_DYNAMIC" cargo behaviors
 
 var cargoScene = preload("res://Hevs-More-Minerals/ships/modules/ProcessedCargo.tscn")
 
@@ -16,22 +16,32 @@ func _ready():
 	extendedMineralCount = float(CurrentGame.traceMinerals.size())
 	cargoCapacityModifier = (baseMineralCount / extendedMineralCount)
 
-#	if playerControlled:
-#		add_child(cargoScene.instance())
+	if playerControlled:
+		add_child(cargoScene.instance())
 
+	pointersHMM = get_tree().get_root().get_node_or_null("HevLib~Pointers")
+	pointersHMM.ConfigDriver.__establish_connection("hmm_control_update_values",self)
+	hmm_control_update_values()
 
 # Get a ship's total processed cargo capacity
 func getTotalProcessedCargoCapacity()->float:
 	if processedCargoStorageType == "divided":
 		match cargoBehavior:
-			"default":
+			"MOREMINERALS_CARGO_BEHAVIOUR_DEFAULT":
 				return processedCargoCapacity * extendedMineralCount
-			"reduced", "limited", "dynamic":
+			"MOREMINERALS_CARGO_BEHAVIOUR_REDUCED", "MOREMINERALS_CARGO_BEHAVIOUR_LIMITED", "MOREMINERALS_CARGO_BEHAVIOUR_DYNAMIC":
 				return processedCargoCapacity * baseMineralCount
 			_:
 				return 0.0
 	else:
 		return .getTotalProcessedCargoCapacity()
+var pointersHMM
+
+
+func hmm_control_update_values():
+	if pointersHMM:
+		cargoBehavior = pointersHMM.ConfigDriver.__get_value("Hev'sMoreMinerals","MOREMINERALS_SECTION_ORE_HANDLING","cargo_behaviour")
+		maxCargoTypes = pointersHMM.ConfigDriver.__get_value("Hev'sMoreMinerals","MOREMINERALS_SECTION_ORE_HANDLING","max_cargo_types")
 
 # Get a ship's processed cargo capacity for a single mineral
 func getProcessedCargoCapacity(mineral:String)->float:
@@ -43,13 +53,13 @@ func getProcessedCargoCapacity(mineral:String)->float:
 	if setup and processedCargoStorageType == "divided":
 		match cargoBehavior:
 
-			"default":
+			"MOREMINERALS_CARGO_BEHAVIOUR_DEFAULT":
 				return .getProcessedCargoCapacity(mineral)
 
-			"reduced":
+			"MOREMINERALS_CARGO_BEHAVIOUR_REDUCED":
 				return (processedCargoCapacity * cargoCapacityModifier)
 
-			"limited":
+			"MOREMINERALS_CARGO_BEHAVIOUR_LIMITED":
 #				yield(get_tree(),"idle_frame")
 				var types = getProcessedCargoTypes()
 				if types.size() > maxCargoTypes:
@@ -61,7 +71,7 @@ func getProcessedCargoCapacity(mineral:String)->float:
 						return 0.0
 				return processedCargoCapacity
 
-			"dynamic":
+			"MOREMINERALS_CARGO_BEHAVIOUR_DYNAMIC":
 				var baysFree = maxCargoTypes
 
 				for m in shipConfig.processedCargo:
@@ -78,7 +88,7 @@ func getProcessedCargoCapacity(mineral:String)->float:
 		return .getProcessedCargoCapacity(mineral)
 
 func respect_limits(postready = false):
-	if cargoBehavior == "limited" or cargoBehavior == "dynamic":
+	if cargoBehavior == "MOREMINERALS_CARGO_BEHAVIOUR_LIMITED" or cargoBehavior == "MOREMINERALS_CARGO_BEHAVIOUR_DYNAMIC":
 		configMutex.lock()
 		var entries = shipConfig.processedCargo.keys()
 		if postready:

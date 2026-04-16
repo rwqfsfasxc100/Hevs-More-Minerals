@@ -14,6 +14,7 @@ func _ready():
 	modProcessedCargoTransferSpeed = processedCargoTransferSpeed
 #	Override to prevent the base script from attempting cargo transfers
 	processedCargoTransferSpeed = 0
+	has_loaded = true
 	
 
 func _physics_process(delta):
@@ -33,9 +34,10 @@ func _physics_process(delta):
 
 	#		If we have enough energy
 				if (er > 0 and p / er > 0.9):
-
+					var our_cargo = ship.getProcessedCargoTypes()
+					var target_cargo = target.getProcessedCargoTypes()
 	#			For every mineral that the ship has
-					for mineral in ship.getProcessedCargoTypes():
+					for mineral in our_cargo:
 
 	#				If the arm is accepting that mineral
 						if hasMineralEnabled(mineral):
@@ -70,7 +72,7 @@ func _physics_process(delta):
 								target.addProcessedCargo(mineral, a, tppc)
 
 	#			For every mineral that the container has
-					for mineral in target.getProcessedCargoTypes():
+					for mineral in target_cargo:
 
 	#				If the ship is not purging that mineral
 						if !dumpFilter.has(mineral):

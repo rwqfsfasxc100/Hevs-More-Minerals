@@ -49,3 +49,10 @@ DIALOG_HABITAT_NEED_AN|Welcome {target/shipname}. Do you have processed anorthit
 DIALOG_HABITAT_NEED_AN_DESPERATE|I'm really glad to see you {target/shipname}, we could really use some processed anorthite. We'll pay you premium.
 DIALOG_HABITAT_NEED_OR|Welcome {target/shipname}. Do you have processed orthoclase for trade?
 DIALOG_HABITAT_NEED_OR_DESPERATE|I'm really glad to see you {target/shipname}, we could really use some processed orthoclase. We'll pay you premium.
+
+
+
+MOREMINERALS_SECTION_ORE_HANDLING|Processed ore configurations
+
+MOREMINERALS_CONFIG_CARGO_BEHAVIOUR|Cargo behavior
+MOREMINERALS_CONFIG_CARGO_BEHAVIOUR_TOOLTIP|How much the processed cargo hold should be limited

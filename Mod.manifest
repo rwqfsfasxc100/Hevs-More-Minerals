@@ -14,6 +14,38 @@ version_minor=4
 version_bugfix=4
 version_metadata=""
 
+[configs]
+
+MOREMINERALS_SECTION_ORE_HANDLING={
+	"cargo_behaviour":{
+		"name":"MOREMINERALS_CONFIG_CARGO_BEHAVIOUR",
+		"description":"MOREMINERALS_CONFIG_CARGO_BEHAVIOUR_TOOLTIP",
+		"type":"option",
+		"store_method":"string",
+		"options":["MOREMINERALS_CARGO_BEHAVIOUR_LIMITED", "MOREMINERALS_CARGO_BEHAVIOUR_DEFAULT", "MOREMINERALS_CARGO_BEHAVIOUR_REDUCED", "MOREMINERALS_CARGO_BEHAVIOUR_DYNAMIC"],
+		"default":"MOREMINERALS_CARGO_BEHAVIOUR_LIMITED",
+	},
+	"max_cargo_types":{
+		"name":"MOREMINERALS_CARGO_BEHAVIOUR_MAX_TYPES",
+		"description":"MOREMINERALS_CARGO_BEHAVIOUR_MAX_TYPES_TOOLTIP",
+		"type":"int",
+        "style":"slider",
+        "min":6,
+        "max":50,
+        "step":1,
+		"default":6,
+	},
+}
+MOREMINERALS_SECTION_MINERALS={
+	"legacy_mineral_names":{
+		"name":"MOREMINERALS_CONFIG_LEGACY_MINERAL_NAMES",
+		"description":"MOREMINERALS_CONFIG_LEGACY_MINERAL_NAMES_TOOLTIP",
+		"type":"bool",
+		"default":false
+	},
+}
+
+
 [tags]
 
 TAG_ALLOW_ACHIEVEMENTS={"type":"bool","value":true}
