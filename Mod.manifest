@@ -10,8 +10,8 @@ credits=["   --- Contributors ---   ","Tyelan Sin - original mod request","Za'kr
 [version]
 
 version_major=1
-version_minor=4
-version_bugfix=4
+version_minor=5
+version_bugfix=0
 version_metadata=""
 
 [configs]

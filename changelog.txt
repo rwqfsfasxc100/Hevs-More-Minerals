@@ -1,3 +1,26 @@
+[1.5.0]
+
+1="* Removed old mineral scenes in favour of procedural minerals"
+2="* Changed minerals to their chemical formulas from their IMA symbols"
+2.1="* Toggle exists to cosmetically revert them to their old names"
+2.2="* This means a complete removal of all non-elemental minerals, so please sell those before updating."
+3="* Reintroduced mineral limitations"
+3.1="* Added toggles for a majority of these"
+3.2="* No longer crash with rogue containers"
+3.3="* Processed cargo filters can now be toggled, and whether they're remembered can also be toggled"
+4="* Updated supporters list in credits"
+5="* Fixed crash when clicking on the Albedo column"
+6="* Added transit tips"
+
+[1.4.4]
+
+1="* Added GitHub link to allow updates to happen"
+
+[1.4.3]
+
+1="* Added German translations"
+2="* Increased minimum HevLib requirements to 1.11.4"
+
 [1.4.2]
 
 1="* Fixed issue where pressing the mineral name button in the geologist tab would not toggle the column"
