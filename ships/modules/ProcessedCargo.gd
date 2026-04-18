@@ -24,7 +24,7 @@ var containers = []
 func getStatus():
 	return 100
 
-var reset_filters = false
+var reset_filters = true
 # Returns how full the processed cargo is, used to modulate the equipment brightness on the HUD
 func getPower():
 	var t : float = ship.getTotalProcessedCargoCapacity()
@@ -48,13 +48,13 @@ func _ready():
 	if mineralTargetting:
 		#Get the filter from the ship
 		if reset_filters:
-			mineralConfig = CurrentGame.traceMinerals
+			mineralConfig = CurrentGame.traceMinerals.duplicate(true)
 		else:
-			mineralConfig = ship.getConfig("cargo.pfilter", CurrentGame.traceMinerals)
+			mineralConfig = ship.getConfig("cargo.pfilter", CurrentGame.traceMinerals.duplicate(true))
 
 func hmm_processed_cargo_scene_UV():
 	if pointersHMM:
-		reset_filters = pointersHMM.ConfigDriver.__get_value("Hev'sMoreMinerals","MOREMINERALS_SECTION_ORE_HANDLING","eject_processed_ore_reset_filters")
+		reset_filters = pointersHMM.ConfigDriver.__get_value("Hev'sMoreMinerals","MOREMINERALS_SECTION_ORE_HANDLING","reset_eject_processed_ore_filters")
 
 #Enables/Disables given mineral, called whenever geologist filters are changed
 func setMineralConfig(mineral:String, how:bool):

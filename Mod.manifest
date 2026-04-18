@@ -41,11 +41,11 @@ MOREMINERALS_SECTION_ORE_HANDLING={
 		"type":"bool",
 		"default":true
 	},
-	"eject_processed_ore_reset_filters":{
+	"reset_eject_processed_ore_filters":{
 		"name":"MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE_RESET_FILTERS",
 		"description":"MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE_RESET_FILTERS_TOOLTIP",
 		"type":"bool",
-		"default":false,
+		"default":true,
 		"requires_bools":["Hev'sMoreMinerals/MOREMINERALS_SECTION_ORE_HANDLING/eject_processed_ore"],
 	},
 }
