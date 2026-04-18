@@ -67,242 +67,242 @@ setDiscountTo = 5.0
 
 [node name="DIALOG_HABITAT_NEED_FO" parent="." index="30" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
-tradeInMineral = "Fo"
+tradeInMineral = "Mg2SiO4"
 
 [node name="DIALOG_HABITAT_NEED_FO|like" parent="." index="31" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "support"
-tradeInMineral = "Fo"
+tradeInMineral = "Mg2SiO4"
 
 [node name="DIALOG_HABITAT_NEED_FA" parent="." index="32" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
-tradeInMineral = "Fa"
+tradeInMineral = "Fe2SiO4"
 
 [node name="DIALOG_HABITAT_NEED_FA|like" parent="." index="33" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "support"
-tradeInMineral = "Fa"
+tradeInMineral = "Fe2SiO4"
 
 [node name="DIALOG_HABITAT_NEED_DI" parent="." index="34" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
-tradeInMineral = "Di"
+tradeInMineral = "MgCaSi2O6"
 
 [node name="DIALOG_HABITAT_NEED_DI|like" parent="." index="35" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "support"
-tradeInMineral = "Di"
+tradeInMineral = "MgCaSi2O6"
 
 [node name="DIALOG_HABITAT_NEED_JD" parent="." index="36" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
-tradeInMineral = "Jd"
+tradeInMineral = "NaAlSi2O6"
 
 [node name="DIALOG_HABITAT_NEED_JD|like" parent="." index="37" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "support"
-tradeInMineral = "Jhn"
+tradeInMineral = "NaAlSi2O6"
 
 [node name="DIALOG_HABITAT_NEED_JHN" parent="." index="38" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
-tradeInMineral = "Jhn"
+tradeInMineral = "CaMn2Si2O6"
 
 [node name="DIALOG_HABITAT_NEED_JHN|like" parent="." index="39" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "support"
-tradeInMineral = "Jd"
+tradeInMineral = "CaMn2Si2O6"
 
 [node name="DIALOG_HABITAT_NEED_KOS" parent="." index="40" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
-tradeInMineral = "Kos"
+tradeInMineral = "NaCr3Si2O6"
 
 [node name="DIALOG_HABITAT_NEED_KOS|like" parent="." index="41" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "support"
-tradeInMineral = "Kos"
+tradeInMineral = "NaCr3Si2O6"
 
 [node name="DIALOG_HABITAT_NEED_NMS" parent="." index="42" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
-tradeInMineral = "Nms"
+tradeInMineral = "NaMn3Si2O6"
 
 [node name="DIALOG_HABITAT_NEED_NMS|like" parent="." index="43" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "support"
-tradeInMineral = "Nms"
+tradeInMineral = "NaMn3Si2O6"
 
 [node name="DIALOG_HABITAT_NEED_NTA" parent="." index="44" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
-tradeInMineral = "Nta"
+tradeInMineral = "NaV3Si2O6"
 
 [node name="DIALOG_HABITAT_NEED_NTA|like" parent="." index="45" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "support"
-tradeInMineral = "Nta"
+tradeInMineral = "NaV3Si2O6"
 
 [node name="DIALOG_HABITAT_NEED_SPD" parent="." index="46" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
-tradeInMineral = "Spd"
+tradeInMineral = "LiAl(SiO3)2"
 
 [node name="DIALOG_HABITAT_NEED_SPD|like" parent="." index="47" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "support"
-tradeInMineral = "Spd"
+tradeInMineral = "LiAl(SiO3)2"
 
 [node name="DIALOG_HABITAT_NEED_EN" parent="." index="48" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
-tradeInMineral = "En"
+tradeInMineral = "MgSiO3"
 
 [node name="DIALOG_HABITAT_NEED_EN|like" parent="." index="49" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "support"
-tradeInMineral = "En"
+tradeInMineral = "MgSiO3"
 
 [node name="DIALOG_HABITAT_NEED_QZ" parent="." index="50" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
-tradeInMineral = "Qz"
+tradeInMineral = "SiO2"
 
 [node name="DIALOG_HABITAT_NEED_QZ|like" parent="." index="51" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "support"
-tradeInMineral = "Qz"
+tradeInMineral = "SiO2"
 
 [node name="DIALOG_HABITAT_NEED_CRS" parent="." index="52" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
-tradeInMineral = "Crs"
+tradeInMineral = "SiO2 (Crs)"
 
 [node name="DIALOG_HABITAT_NEED_CRS|like" parent="." index="53" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "support"
-tradeInMineral = "Crs"
+tradeInMineral = "SiO2 (Crs)"
 
 [node name="DIALOG_HABITAT_NEED_TRD" parent="." index="54" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
-tradeInMineral = "Trd"
+tradeInMineral = "SiO2 (Trd)"
 
 [node name="DIALOG_HABITAT_NEED_TRD|like" parent="." index="55" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "support"
-tradeInMineral = "Trd"
+tradeInMineral = "SiO2 (Trd)"
 
 [node name="DIALOG_HABITAT_NEED_AB" parent="." index="56" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
-tradeInMineral = "Ab"
+tradeInMineral = "NaAlSi3O8"
 
 [node name="DIALOG_HABITAT_NEED_AB|like" parent="." index="57" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "support"
-tradeInMineral = "Ab"
+tradeInMineral = "NaAlSi3O8"
 
 [node name="DIALOG_HABITAT_NEED_AN" parent="." index="58" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
-tradeInMineral = "An"
+tradeInMineral = "CaAl2Si2O8"
 
 [node name="DIALOG_HABITAT_NEED_AN|like" parent="." index="59" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "support"
-tradeInMineral = "An"
+tradeInMineral = "CaAl2Si2O8"
 
 [node name="DIALOG_HABITAT_NEED_OR" parent="." index="60" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
-tradeInMineral = "Or"
+tradeInMineral = "KAlSi3O8"
 
 [node name="DIALOG_HABITAT_NEED_OR|like" parent="." index="61" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "support"
-tradeInMineral = "Or"
+tradeInMineral = "KAlSi3O8"
 
 [node name="DIALOG_HABITAT_NEED_FO_DESPERATE" parent="." index="62" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
 changeHostility = -0.5
 changeFear = -0.5
-tradeInMineral = "Fo"
+tradeInMineral = "Mg2SiO4"
 setDiscountTo = 5.0
 
 [node name="DIALOG_HABITAT_NEED_FA_DESPERATE" parent="." index="63" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
 changeHostility = -0.5
 changeFear = -0.5
-tradeInMineral = "Fa"
+tradeInMineral = "Fe2SiO4"
 setDiscountTo = 5.0
 
 [node name="DIALOG_HABITAT_NEED_DI_DESPERATE" parent="." index="64" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
 changeHostility = -0.5
 changeFear = -0.5
-tradeInMineral = "Di"
+tradeInMineral = "MgCaSi2O6"
 setDiscountTo = 5.0
 
 [node name="DIALOG_HABITAT_NEED_JD_DESPERATE" parent="." index="65" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
 changeHostility = -0.5
 changeFear = -0.5
-tradeInMineral = "Jd"
+tradeInMineral = "NaAlSi2O6"
 setDiscountTo = 5.0
 
 [node name="DIALOG_HABITAT_NEED_JHN_DESPERATE" parent="." index="66" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
 changeHostility = -0.5
 changeFear = -0.5
-tradeInMineral = "Jhn"
+tradeInMineral = "CaMn2Si2O6"
 setDiscountTo = 5.0
 
 [node name="DIALOG_HABITAT_NEED_KOS_DESPERATE" parent="." index="67" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
 changeHostility = -0.5
 changeFear = -0.5
-tradeInMineral = "Kos"
+tradeInMineral = "NaCr3Si2O6"
 setDiscountTo = 5.0
 
 [node name="DIALOG_HABITAT_NEED_NMS_DESPERATE" parent="." index="68" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
 changeHostility = -0.5
 changeFear = -0.5
-tradeInMineral = "Nms"
+tradeInMineral = "NaMn3Si2O6"
 setDiscountTo = 5.0
 
 [node name="DIALOG_HABITAT_NEED_NTA_DESPERATE" parent="." index="69" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
 changeHostility = -0.5
 changeFear = -0.5
-tradeInMineral = "Nta"
+tradeInMineral = "NaV3Si2O6"
 setDiscountTo = 5.0
 
 [node name="DIALOG_HABITAT_NEED_SPD_DESPERATE" parent="." index="70" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
 changeHostility = -0.5
 changeFear = -0.5
-tradeInMineral = "Spd"
+tradeInMineral = "LiAl(SiO3)2"
 setDiscountTo = 5.0
 
 [node name="DIALOG_HABITAT_NEED_EN_DESPERATE" parent="." index="71" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
 changeHostility = -0.5
 changeFear = -0.5
-tradeInMineral = "En"
+tradeInMineral = "MgSiO3"
 setDiscountTo = 5.0
 
 [node name="DIALOG_HABITAT_NEED_QZ_DESPERATE" parent="." index="72" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
 changeHostility = -0.5
 changeFear = -0.5
-tradeInMineral = "Qz"
+tradeInMineral = "SiO2"
 setDiscountTo = 5.0
 
 [node name="DIALOG_HABITAT_NEED_CRS_DESPERATE" parent="." index="73" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
 changeHostility = -0.5
 changeFear = -0.5
-tradeInMineral = "Crs"
+tradeInMineral = "SiO2 (Crs)"
 setDiscountTo = 5.0
 
 [node name="DIALOG_HABITAT_NEED_TRD_DESPERATE" parent="." index="74" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
 changeHostility = -0.5
 changeFear = -0.5
-tradeInMineral = "Trd"
+tradeInMineral = "SiO2 (Trd)"
 setDiscountTo = 5.0
 
 [node name="DIALOG_HABITAT_NEED_AB_DESPERATE" parent="." index="75" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
 changeHostility = -0.5
 changeFear = -0.5
-tradeInMineral = "Ab"
+tradeInMineral = "NaAlSi3O8"
 setDiscountTo = 5.0
 
 [node name="DIALOG_HABITAT_NEED_AN_DESPERATE" parent="." index="76" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
 changeHostility = -0.5
 changeFear = -0.5
-tradeInMineral = "An"
+tradeInMineral = "CaAl2Si2O8"
 setDiscountTo = 5.0
 
 [node name="DIALOG_HABITAT_NEED_OR_DESPERATE" parent="." index="77" instance=ExtResource( 2 )]
 mostPrelevantDisposition = "curiosity"
 changeHostility = -0.5
 changeFear = -0.5
-tradeInMineral = "Or"
+tradeInMineral = "KAlSi3O8"
 setDiscountTo = 5.0
 
 [editable path="DIALOG_HABITAT_DOCKING_SECURE"]
