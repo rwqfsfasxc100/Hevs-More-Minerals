@@ -11,17 +11,21 @@ var maxCargoTypes = 6 #For use with "MOREMINERALS_CARGO_BEHAVIOUR_LIMITED" and "
 
 var cargoScene = preload("res://Hevs-More-Minerals/ships/modules/ProcessedCargo.tscn")
 
+var processedStorageToggles = true
 
 func _ready():
 	extendedMineralCount = float(CurrentGame.traceMinerals.size())
 	cargoCapacityModifier = (baseMineralCount / extendedMineralCount)
-
-	if playerControlled:
-		add_child(cargoScene.instance())
-
+	
 	pointersHMM = get_tree().get_root().get_node_or_null("HevLib~Pointers")
 	pointersHMM.ConfigDriver.__establish_connection("hmm_control_update_values",self)
 	hmm_control_update_values()
+	
+	
+	
+	if processedStorageToggles and isPlayerControlled():
+		add_child(cargoScene.instance())
+
 
 # Get a ship's total processed cargo capacity
 func getTotalProcessedCargoCapacity()->float:
@@ -42,7 +46,8 @@ func hmm_control_update_values():
 	if pointersHMM:
 		cargoBehavior = pointersHMM.ConfigDriver.__get_value("Hev'sMoreMinerals","MOREMINERALS_SECTION_ORE_HANDLING","cargo_behaviour")
 		maxCargoTypes = pointersHMM.ConfigDriver.__get_value("Hev'sMoreMinerals","MOREMINERALS_SECTION_ORE_HANDLING","max_cargo_types")
-
+		processedStorageToggles = pointersHMM.ConfigDriver.__get_value("Hev'sMoreMinerals","MOREMINERALS_SECTION_ORE_HANDLING","eject_processed_ore")
+		
 # Get a ship's processed cargo capacity for a single mineral
 func getProcessedCargoCapacity(mineral:String)->float:
 	removeSchrodingersIron()
