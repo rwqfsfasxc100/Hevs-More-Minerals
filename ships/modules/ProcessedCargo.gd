@@ -33,7 +33,7 @@ func getPower():
 		c += ship.shipConfig.processedCargo[m]
 
 	return (c / t)
-
+var ringMinerals = CurrentGame.traceMinerals.duplicate(true)
 var pointersHMM
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -48,9 +48,9 @@ func _ready():
 	if mineralTargetting:
 		#Get the filter from the ship
 		if reset_filters:
-			mineralConfig = CurrentGame.traceMinerals.duplicate(true)
+			mineralConfig = ringMinerals.duplicate(true)
 		else:
-			mineralConfig = ship.getConfig("cargo.pfilter", CurrentGame.traceMinerals.duplicate(true))
+			mineralConfig = ship.getConfig("cargo.pfilter", ringMinerals.duplicate(true))
 
 func hmm_processed_cargo_scene_UV():
 	if pointersHMM:
@@ -59,7 +59,7 @@ func hmm_processed_cargo_scene_UV():
 #Enables/Disables given mineral, called whenever geologist filters are changed
 func setMineralConfig(mineral:String, how:bool):
 	if mineralTargetting:
-		if !how:
+		if how:
 			if not mineralConfig.has(mineral):
 				mineralConfig.append(mineral)
 		else :
@@ -71,32 +71,32 @@ func setMineralConfig(mineral:String, how:bool):
 #Checks if the mineral is enabled, used by  the geologist menu to determine what buttons should be pressed
 func hasMineralEnabled(mineral)->bool:
 	if mineralTargetting:
-		return !mineralConfig.has(mineral)
+		return mineralConfig.has(mineral)
 	else :
 		return false
 
 
 func _physics_process(delta):
 #	Check what minerals we need to handle this tick
-	for m in mineralConfig:
-
-#	Check if any containers have empty space
-		var dump = true
-		for c in containers:
-			if Tool.claim(c):
-				if c.enabled and c.locked and c.mineralTargetting and c.mineralConfig.minerals.has(m):
-					if Tool.claim(c.target):
-						if c.target.getProcessedCargo(m) < c.target.getProcessedCargoCapacity(m):
-							dump = false
+	for m in ringMinerals:
+		if not m in mineralConfig:
+#		Check if any containers have empty space
+			var dump = true
+			for c in containers:
+				if Tool.claim(c):
+					if c.enabled and c.locked and c.mineralTargetting and c.mineralConfig.minerals.has(m):
+						if Tool.claim(c.target):
+							if c.target.getProcessedCargo(m) < c.target.getProcessedCargoCapacity(m):
+								dump = false
+								Tool.release(c.target)
+								Tool.release(c)
+								break
 							Tool.release(c.target)
-							Tool.release(c)
-							break
-						Tool.release(c.target)
-				Tool.release(c)
+					Tool.release(c)
 
-#	If there is no empty space, dump the mineral
-		if dump:
-			dumpMineral(m, delta)
+#		If there is no empty space, dump the mineral
+			if dump:
+				dumpMineral(m, delta)
 
 
 
