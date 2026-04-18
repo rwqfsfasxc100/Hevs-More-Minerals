@@ -401,6 +401,134 @@ const TRANSLATIONS = {
 		"MOREMINERALS_CONFIG_LEGACY_MINERAL_NAMES_TOOLTIP": {
 			"string": "Whether minerals should be given their IMA names from older versions of the mod",
 			"version_hash": 2266364166
+		},
+		"Mg2SiO4": {
+			"string": "Fo",
+			"version_hash": 5862330,
+			"mod": "Hev'sMoreMinerals",
+			"section": "MOREMINERALS_SECTION_MINERALS",
+			"setting": "legacy_mineral_names",
+			"invert": false
+		},
+		"Fe2SiO4": {
+			"string": "Fa",
+			"version_hash": 5862316,
+			"mod": "Hev'sMoreMinerals",
+			"section": "MOREMINERALS_SECTION_MINERALS",
+			"setting": "legacy_mineral_names",
+			"invert": false
+		},
+		"MgCaSi2O6": {
+			"string": "Di",
+			"version_hash": 5862258,
+			"mod": "Hev'sMoreMinerals",
+			"section": "MOREMINERALS_SECTION_MINERALS",
+			"setting": "legacy_mineral_names",
+			"invert": false
+		},
+		"NaAlSi2O6": {
+			"string": "Jd",
+			"version_hash": 5862451,
+			"mod": "Hev'sMoreMinerals",
+			"section": "MOREMINERALS_SECTION_MINERALS",
+			"setting": "legacy_mineral_names",
+			"invert": false
+		},
+		"CaMn2Si2O6": {
+			"string": "Jhn",
+			"version_hash": 193461125,
+			"mod": "Hev'sMoreMinerals",
+			"section": "MOREMINERALS_SECTION_MINERALS",
+			"setting": "legacy_mineral_names",
+			"invert": false
+		},
+		"NaCr3Si2O6": {
+			"string": "Kos",
+			"version_hash": 193462450,
+			"mod": "Hev'sMoreMinerals",
+			"section": "MOREMINERALS_SECTION_MINERALS",
+			"setting": "legacy_mineral_names",
+			"invert": false
+		},
+		"NaMn3Si2O6": {
+			"string": "Nms",
+			"version_hash": 193465651,
+			"mod": "Hev'sMoreMinerals",
+			"section": "MOREMINERALS_SECTION_MINERALS",
+			"setting": "legacy_mineral_names",
+			"invert": false
+		},
+		"NaV3Si2O6": {
+			"string": "Nta",
+			"version_hash": 193465864,
+			"mod": "Hev'sMoreMinerals",
+			"section": "MOREMINERALS_SECTION_MINERALS",
+			"setting": "legacy_mineral_names",
+			"invert": false
+		},
+		"LiAl(SiO3)2": {
+			"string": "Spd",
+			"version_hash": 193471180,
+			"mod": "Hev'sMoreMinerals",
+			"section": "MOREMINERALS_SECTION_MINERALS",
+			"setting": "legacy_mineral_names",
+			"invert": false
+		},
+		"MgSiO3": {
+			"string": "En",
+			"version_hash": 5862296,
+			"mod": "Hev'sMoreMinerals",
+			"section": "MOREMINERALS_SECTION_MINERALS",
+			"setting": "legacy_mineral_names",
+			"invert": false
+		},
+		"SiO2": {
+			"string": "Qz",
+			"version_hash": 5862704,
+			"mod": "Hev'sMoreMinerals",
+			"section": "MOREMINERALS_SECTION_MINERALS",
+			"setting": "legacy_mineral_names",
+			"invert": false
+		},
+		"SiO2 (Crs)": {
+			"string": "Crs",
+			"version_hash": 193453837,
+			"mod": "Hev'sMoreMinerals",
+			"section": "MOREMINERALS_SECTION_MINERALS",
+			"setting": "legacy_mineral_names",
+			"invert": false
+		},
+		"SiO2 (Trd)": {
+			"string": "Trd",
+			"version_hash": 193472335,
+			"mod": "Hev'sMoreMinerals",
+			"section": "MOREMINERALS_SECTION_MINERALS",
+			"setting": "legacy_mineral_names",
+			"invert": false
+		},
+		"NaAlSi3O8": {
+			"string": "Ab",
+			"version_hash": 5862152,
+			"mod": "Hev'sMoreMinerals",
+			"section": "MOREMINERALS_SECTION_MINERALS",
+			"setting": "legacy_mineral_names",
+			"invert": false
+		},
+		"CaAl2Si2O8": {
+			"string": "An",
+			"version_hash": 5862164,
+			"mod": "Hev'sMoreMinerals",
+			"section": "MOREMINERALS_SECTION_MINERALS",
+			"setting": "legacy_mineral_names",
+			"invert": false
+		},
+		"KAlSi3O8": {
+			"string": "Or",
+			"version_hash": 5862630,
+			"mod": "Hev'sMoreMinerals",
+			"section": "MOREMINERALS_SECTION_MINERALS",
+			"setting": "legacy_mineral_names",
+			"invert": false
 		}
 	}
 }
