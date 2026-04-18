@@ -529,6 +529,30 @@ const TRANSLATIONS = {
 			"section": "MOREMINERALS_SECTION_MINERALS",
 			"setting": "legacy_mineral_names",
 			"invert": false
+		},
+		"MOREMINERALS_TRANSIT_TIPS_1": {
+			"string": "Feel too limited by the fact you can only store 6 minerals at once? Increase that limit or remove it entirely in Mod Menu",
+			"version_hash": 2505559003
+		},
+		"MOREMINERALS_TRANSIT_TIPS_2": {
+			"string": "Prefer to not memorize compound names? Enable the legacy mineral names in the config to use the IMA abbreviations instead",
+			"version_hash": 3283153149
+		},
+		"MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE": {
+			"string": "Eject processed ore",
+			"version_hash": 126963998
+		},
+		"MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE_TOOLTIP": {
+			"string": "Adds the processed mineral storage to the system list, with toggles in the Geologist tab.\n\nDisabling toggles will move ore to any applicable cargo containers if they exist, before ejecting the ore from your ship entirely.",
+			"version_hash": 1567911022
+		},
+		"MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE_RESET_FILTERS": {
+			"string": "Reset filters for ejected ore",
+			"version_hash": 1405606274
+		},
+		"MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE_RESET_FILTERS_TOOLTIP": {
+			"string": "Whether the filters for the processed storage mineral ejection should reset every dive instead of remembering the filters.",
+			"version_hash": 1641254987
 		}
 	}
 }

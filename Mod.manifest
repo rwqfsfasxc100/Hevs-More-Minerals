@@ -35,6 +35,19 @@ MOREMINERALS_SECTION_ORE_HANDLING={
         "step":1,
 		"default":6,
 	},
+	"eject_processed_ore":{
+		"name":"MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE",
+		"description":"MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE_TOOLTIP",
+		"type":"bool",
+		"default":true
+	},
+	"eject_processed_ore_reset_filters":{
+		"name":"MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE_RESET_FILTERS",
+		"description":"MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE_RESET_FILTERS_TOOLTIP",
+		"type":"bool",
+		"default":false,
+		"requires_bools":["Hev'sMoreMinerals/MOREMINERALS_SECTION_ORE_HANDLING/eject_processed_ore"],
+	},
 }
 MOREMINERALS_SECTION_MINERALS={
 	"legacy_mineral_names":{
@@ -52,6 +65,7 @@ TAG_ALLOW_ACHIEVEMENTS={"type":"bool","value":true}
 TAG_OVERHAUL={"type":"bool","value":true}
 TAG_QOL={"type":"bool","value":true}
 TAG_ADDS_GAMEPLAY_MECHANICS={"type":"array","value":["Adds lots of new minerals"]}
+TAG_ADD_TRANSIT_TIPS={"type":"array","value":["MOREMINERALS_TRANSIT_TIPS_1","MOREMINERALS_TRANSIT_TIPS_2"]}
 
 [languages]
 
