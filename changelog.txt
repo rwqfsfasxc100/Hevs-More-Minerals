@@ -1,3 +1,9 @@
+[1.5.2]
+
+1="* Fixed crash caused by toggling minerals for the processed storage node"
+2="* Fixed broken habitat trades"
+3="* Processed cargo toggles are now intuitive to use, with enabled meaning it stays on the ship"
+
 [1.5.1]
 
 1="* Processed mineral dumping now defaults to allowing all minerals as a precautionary backup"
