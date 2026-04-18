@@ -50,7 +50,7 @@ func _ready():
 		if reset_filters:
 			mineralConfig = CurrentGame.traceMinerals
 		else:
-			mineralConfig = ship.getConfig("cargo.pfilter", [])
+			mineralConfig = ship.getConfig("cargo.pfilter", CurrentGame.traceMinerals)
 
 func hmm_processed_cargo_scene_UV():
 	if pointersHMM:
