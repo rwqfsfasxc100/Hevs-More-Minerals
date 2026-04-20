@@ -1,0 +1,7 @@
+;MOD_ID|hev.MoreMinerals
+;MOD_NAME|Hev's More Minerals
+;MOD_ZIP_NAME|Hevs-More-Minerals.zip
+
+[b]Abandoned Technologies[/b]
+
+Description example text
