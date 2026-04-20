@@ -2,6 +2,19 @@
 ;MOD_NAME|Hev's More Minerals
 ;MOD_ZIP_NAME|Hevs-More-Minerals.zip
 
-[b]Abandoned Technologies[/b]
+[b]Hev's More Minerals[/b]
 
-Description example text
+[center][b]Features:[/b][/center]
+
+[b]New Minerals[/b]
+[indent]- 22 new mineral types!
+
+- 20 new Obonto Trades![/indent]
+
+- Mass Geologist filter toggles
+[indent]- Press the name of the equipment to turn all toggles on or off in one click.[/indent]
+
+- Multiple minerals per chunk!
+[indent]- Enabled in HevLib rather than through this mod.
+- Every mineral chunk has a chance to contain more than one type of mineral.
+- Less pure mineral chunks will tend to contain more of the other minerals.[/indent]
