@@ -37,25 +37,15 @@ func initHUD():
 
 func initShip():
 	installScriptExtension("ships/modules/DockingArm.gd")
-#	installScriptExtension("ships/modules/MineralProcessingUnit.gd")
 	installScriptExtension("ships/ship-ctrl.gd")
 	
 
 func initElse():
-#	installScriptExtension("TheRing.gd")
-#	installScriptExtension("CurrentGame.gd")
-#	installScriptExtension("story/LifepodIsFloating.gd")
-#	replaceScene("story/TheRing.tscn")
-
 	replaceScene("comms/conversation/HabitatConversation.tscn")
 
 
 #Do stuff on ready 
 func _ready():
-#	Add our translations
-#	updateTL("i18n/en.txt", "|")
-#	updateTL("i18n/de.txt", "|")
-
 	l("Ready")
 
 # Helper script to load translations using csv format
