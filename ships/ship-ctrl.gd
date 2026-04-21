@@ -33,8 +33,12 @@ func getTotalProcessedCargoCapacity()->float:
 		match cargoBehavior:
 			"MOREMINERALS_CARGO_BEHAVIOUR_DEFAULT":
 				return processedCargoCapacity * extendedMineralCount
-			"MOREMINERALS_CARGO_BEHAVIOUR_REDUCED", "MOREMINERALS_CARGO_BEHAVIOUR_LIMITED", "MOREMINERALS_CARGO_BEHAVIOUR_DYNAMIC":
+			"MOREMINERALS_CARGO_BEHAVIOUR_REDUCED":
 				return processedCargoCapacity * baseMineralCount
+			"MOREMINERALS_CARGO_BEHAVIOUR_LIMITED", "MOREMINERALS_CARGO_BEHAVIOUR_DYNAMIC":
+				return processedCargoCapacity * maxCargoTypes
+#			"MOREMINERALS_CARGO_BEHAVIOUR_REDUCED", "MOREMINERALS_CARGO_BEHAVIOUR_LIMITED", "MOREMINERALS_CARGO_BEHAVIOUR_DYNAMIC":
+#				return processedCargoCapacity * baseMineralCount
 			_:
 				return 0.0
 	else:
@@ -99,7 +103,7 @@ func respect_limits(postready = false):
 		if postready:
 			randomize()
 			entries.shuffle()
-		for i in range(baseMineralCount):
+		for i in range(maxCargoTypes):
 			entries.pop_front()
 		for i in entries:
 			shipConfig.processedCargo.erase(i)
