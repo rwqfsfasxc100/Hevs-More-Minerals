@@ -1,5 +1,6 @@
 ;MOD_ID|hev.MoreMinerals
 ;MOD_NAME|Hev's More Minerals
+;MOD_ICON|https://raw.githubusercontent.com/rwqfsfasxc100/Hevs-More-Minerals/refs/heads/main/icon.png
 ;MOD_ZIP_NAME|Hevs-More-Minerals.zip
 
 [b]Hev's More Minerals[/b]

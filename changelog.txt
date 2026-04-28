@@ -1,3 +1,7 @@
+[1.5.4]
+
+1="* Added mod icon"
+
 [1.5.3]
 
 1="* Fixed max cargo types value being overriden by the vanilla ore count"
