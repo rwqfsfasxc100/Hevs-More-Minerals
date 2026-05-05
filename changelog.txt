@@ -1,3 +1,8 @@
+[1.5.5]
+
+1="* Fixed a bug that caused any processed minerals stored in any containers or other vessels docked to a cradle to be unretrievable"
+1.1="* Trapped ores would be effectively unusable, making you unable to use them for printing consumables or selling to habitats"
+
 [1.5.4]
 
 1="* Added mod icon"
