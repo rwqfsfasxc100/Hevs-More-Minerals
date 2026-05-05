@@ -5,13 +5,13 @@ extends "res://ships/modules/DockingArm.gd"
 #What minerals the ship is trying to purge
 var dumpFilter = []
 #How fast we can transfer minerals
-var modProcessedCargoTransferSpeed
+var hmmProcessedCargoTransferSpeed
 
 var has_loaded = false
 
 func _ready():
 #	Set our transfer speed
-	modProcessedCargoTransferSpeed = processedCargoTransferSpeed
+	hmmProcessedCargoTransferSpeed = processedCargoTransferSpeed
 #	Override to prevent the base script from attempting cargo transfers
 	processedCargoTransferSpeed = 0
 	has_loaded = true
@@ -21,7 +21,7 @@ func _physics_process(delta):
 	if has_loaded:
 		var transfering = false
 	#	Calculate how much we can transfer this physics tick
-		var oreTransfer = delta * modProcessedCargoTransferSpeed
+		var oreTransfer = delta * hmmProcessedCargoTransferSpeed
 
 	#	If the arm is enabled, and locked onto a container
 		if delta > 0 and enabled and locked and Tool.claim(target):
@@ -46,7 +46,7 @@ func _physics_process(delta):
 	#					Capacity of the object the arm is holding
 							var tppc = target.getProcessedCargoCapacity(mineral)
 	#					If the ship is not purging that mineral
-							if !dumpFilter.has(mineral):
+							if dumpFilter.has(mineral):#!dumpFilter.has(mineral):
 	#						Leave the transfer buffer
 								onShip = processedCargoTransferBuffer
 
@@ -75,7 +75,7 @@ func _physics_process(delta):
 					for mineral in target_cargo:
 
 	#				If the ship is not purging that mineral
-						if !dumpFilter.has(mineral):
+						if dumpFilter.has(mineral):#!dumpFilter.has(mineral):
 	#					Capacity of the ship for that mineral
 							var tppc = ship.getProcessedCargoCapacity(mineral)
 	#					How much we want to put on the ship
@@ -116,7 +116,7 @@ func _physics_process(delta):
 
 #	Modified to show minerals in OMS despite processedCargoTransferSpeed being 0 
 func getMineralInTarget(mineral)->float:
-	if modProcessedCargoTransferSpeed > 0:
+	if hmmProcessedCargoTransferSpeed > 0:
 		if Tool.claim(target):
 			var ret = 0.0
 			if target.has_method("getProcessedCargo"):
