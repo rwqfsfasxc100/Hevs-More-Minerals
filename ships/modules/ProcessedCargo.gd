@@ -37,7 +37,7 @@ var ringMinerals = CurrentGame.traceMinerals.duplicate(true)
 var pointersHMM
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pointersHMM = get_tree().get_root().get_node_or_null("HevLib~Pointers")
+	pointersHMM = ModLoader._savedObjects[0]
 	pointersHMM.ConfigDriver.__establish_connection("hmm_control_update_values",self)
 	hmm_processed_cargo_scene_UV()
 	

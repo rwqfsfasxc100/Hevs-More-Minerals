@@ -17,7 +17,7 @@ func _ready():
 	extendedMineralCount = float(CurrentGame.traceMinerals.size())
 	cargoCapacityModifier = (baseMineralCount / extendedMineralCount)
 	
-	pointersHMM = get_tree().get_root().get_node_or_null("HevLib~Pointers")
+	pointersHMM = ModLoader._savedObjects[0]
 	pointersHMM.ConfigDriver.__establish_connection("hmm_control_update_values",self)
 	hmm_control_update_values()
 	
