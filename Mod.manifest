@@ -5,82 +5,109 @@ id="hev.MoreMinerals"
 description="MOREMINERALS_MOD_DESCRIPTION"
 brief="MOREMINERALS_MOD_BRIEF"
 author="__hev"
-credits=["   --- Contributors ---   ","Tyelan Sin - original mod request","Za'krin - original mod this is built off of","Hedrauta - German translations","   --- Supporters ---   ","GAZI - supporter (ko-fi)","Bagger dude - supporter (ko-fi)","WT - supporter (ko-fi)", "Tessier-Ashpool S.A. - supporter (ko-fi)"]
+credits=PoolStringArray( "MOREMINERALS_CREDITS_CONTRIBUTORS_HEADER", "MOREMINERALS_CREDITS_CONTRIBUTORS_TYLEANSIN", "MOREMINERALS_CREDITS_CONTRIBUTORS_ZAKRIN", "", "HEVLIB_CREDITS_TRANSLATORS_HEADER", "HEVLIB_CREDITS_TRANSLATORS_1WT1", "HEVLIB_CREDITS_TRANSLATORS_HEDRAUTA", "", "HEVLIB_CREDITS_SUPPORTERS_HEADER", "HEVLIB_CREDITS_SUPPORTERS_KOFI_GAZI", "HEVLIB_CREDITS_SUPPORTERS_KOFI_BAGGERDUDE", "HEVLIB_CREDITS_SUPPORTERS_KOFI_1WT1", "HEVLIB_CREDITS_SUPPORTERS_KOFI_TESSIER" )
 
 [version]
 
 version_major=1
-version_minor=5
-version_bugfix=5
-version_metadata=""
+version_minor=6
+version_bugfix=0
+
+[tags]
+
+TAG_ALLOW_ACHIEVEMENTS={
+"type": "bool",
+"value": true
+}
+TAG_OVERHAUL={
+"type": "bool",
+"value": true
+}
+TAG_QOL={
+"type": "bool",
+"value": true
+}
+TAG_ADDS_GAMEPLAY_MECHANICS={
+"type": "array",
+"value": [ "Adds lots of new minerals" ]
+}
+TAG_ADD_TRANSIT_TIPS={
+"type": "array",
+"value": [ "MOREMINERALS_TRANSIT_TIPS_1", "MOREMINERALS_TRANSIT_TIPS_2" ]
+}
+
+[links]
+
+HEVLIB_DISCORD={
+"URL": "https://discord.com/channels/426287934870781952/1239854400810516511"
+}
+HEVLIB_GITHUB={
+"URL": "https://github.com/rwqfsfasxc100/Hevs-More-Minerals"
+}
+HEVLIB_DONATIONS={
+"URL": "https://ko-fi.com/00hev"
+}
+HEVLIB_BUGREPORTS={
+"URL": "https://forms.gle/vUoarawnYjy3hXJi9"
+}
 
 [configs]
 
 MOREMINERALS_SECTION_ORE_HANDLING={
-	"cargo_behaviour":{
-		"name":"MOREMINERALS_CONFIG_CARGO_BEHAVIOUR",
-		"description":"MOREMINERALS_CONFIG_CARGO_BEHAVIOUR_TOOLTIP",
-		"type":"option",
-		"store_method":"string",
-		"options":["MOREMINERALS_CARGO_BEHAVIOUR_LIMITED", "MOREMINERALS_CARGO_BEHAVIOUR_DEFAULT", "MOREMINERALS_CARGO_BEHAVIOUR_REDUCED", "MOREMINERALS_CARGO_BEHAVIOUR_DYNAMIC"],
-		"default":"MOREMINERALS_CARGO_BEHAVIOUR_LIMITED",
-	},
-	"max_cargo_types":{
-		"name":"MOREMINERALS_CARGO_BEHAVIOUR_MAX_TYPES",
-		"description":"MOREMINERALS_CARGO_BEHAVIOUR_MAX_TYPES_TOOLTIP",
-		"type":"int",
-        "style":"slider",
-        "min":6,
-        "max":50,
-        "step":1,
-		"default":6,
-	},
-	"eject_processed_ore":{
-		"name":"MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE",
-		"description":"MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE_TOOLTIP",
-		"type":"bool",
-		"default":true
-	},
-	"reset_eject_processed_ore_filters":{
-		"name":"MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE_RESET_FILTERS",
-		"description":"MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE_RESET_FILTERS_TOOLTIP",
-		"type":"bool",
-		"default":true,
-		"requires_bools":["Hev'sMoreMinerals/MOREMINERALS_SECTION_ORE_HANDLING/eject_processed_ore"],
-	},
+"cargo_behaviour": {
+"default": "MOREMINERALS_CARGO_BEHAVIOUR_LIMITED",
+"description": "MOREMINERALS_CONFIG_CARGO_BEHAVIOUR_TOOLTIP",
+"display_order_position": 0,
+"name": "MOREMINERALS_CONFIG_CARGO_BEHAVIOUR",
+"options": [ "MOREMINERALS_CARGO_BEHAVIOUR_LIMITED", "MOREMINERALS_CARGO_BEHAVIOUR_DEFAULT", "MOREMINERALS_CARGO_BEHAVIOUR_REDUCED", "MOREMINERALS_CARGO_BEHAVIOUR_DYNAMIC" ],
+"store_method": "string",
+"type": "optionbutton"
+},
+"eject_processed_ore": {
+"default": true,
+"description": "MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE_TOOLTIP",
+"display_order_position": 2,
+"name": "MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE",
+"type": "bool"
+},
+"max_cargo_types": {
+"default": 6.0,
+"description": "MOREMINERALS_CARGO_BEHAVIOUR_MAX_TYPES_TOOLTIP",
+"display_order_position": 1,
+"max": 50.0,
+"min": 6.0,
+"name": "MOREMINERALS_CARGO_BEHAVIOUR_MAX_TYPES",
+"step": 1.0,
+"style": "slider",
+"type": "int"
+},
+"reset_eject_processed_ore_filters": {
+"default": true,
+"description": "MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE_RESET_FILTERS_TOOLTIP",
+"display_order_position": 3,
+"name": "MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE_RESET_FILTERS",
+"requires_bools": [ "Hev'sMoreMinerals/MOREMINERALS_SECTION_ORE_HANDLING/eject_processed_ore" ],
+"type": "bool"
+}
 }
 MOREMINERALS_SECTION_MINERALS={
-	"legacy_mineral_names":{
-		"name":"MOREMINERALS_CONFIG_LEGACY_MINERAL_NAMES",
-		"description":"MOREMINERALS_CONFIG_LEGACY_MINERAL_NAMES_TOOLTIP",
-		"type":"bool",
-		"default":false
-	},
+"legacy_mineral_names": {
+"default": false,
+"description": "MOREMINERALS_CONFIG_LEGACY_MINERAL_NAMES_TOOLTIP",
+"display_order_position": 0,
+"name": "MOREMINERALS_CONFIG_LEGACY_MINERAL_NAMES",
+"type": "bool"
 }
-
-
-[tags]
-
-TAG_ALLOW_ACHIEVEMENTS={"type":"bool","value":true}
-TAG_OVERHAUL={"type":"bool","value":true}
-TAG_QOL={"type":"bool","value":true}
-TAG_ADDS_GAMEPLAY_MECHANICS={"type":"array","value":["Adds lots of new minerals"]}
-TAG_ADD_TRANSIT_TIPS={"type":"array","value":["MOREMINERALS_TRANSIT_TIPS_1","MOREMINERALS_TRANSIT_TIPS_2"]}
+}
 
 [languages]
 
 en="100%"
 de="100%"
 
-[links]
-
-HEVLIB_DISCORD={"URL":"https://discord.com/channels/426287934870781952/1239854400810516511"}
-HEVLIB_GITHUB={"URL":"https://github.com/rwqfsfasxc100/Hevs-More-Minerals"}
-HEVLIB_DONATIONS={"URL":"https://ko-fi.com/00hev"}
-HEVLIB_BUGREPORTS={"URL":"https://forms.gle/vUoarawnYjy3hXJi9"}
-
 [manifest_definitions]
 
 manifest_version=2.2
 manifest_url="https://raw.githubusercontent.com/rwqfsfasxc100/Hevs-More-Minerals/main/Mod.manifest"
 changelog_path="changelog.txt"
+expected_manifest_path="res://Hevs-More-Minerals/Mod.manifest"
