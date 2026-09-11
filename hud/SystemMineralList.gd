@@ -51,7 +51,7 @@ func toggleColumn(m):
 		var val = child.pressed
 
 	#	For evey child node
-		for nr in range(count):
+		for nr in count:
 	#	Get the node
 			var n = get_child(nr)
 			if n is CheckButton:

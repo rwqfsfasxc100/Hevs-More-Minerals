@@ -139,7 +139,7 @@ func respect_limits(postready = false):
 		if postready:
 			randomize()
 			entries.shuffle()
-		for i in range(maxCargoTypes):
+		for i in maxCargoTypes:
 			entries.pop_front()
 		for i in entries:
 			shipConfig.processedCargo.erase(i)
