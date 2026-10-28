@@ -82,7 +82,7 @@ func _physics_process(delta):
 	#					Capacity of the object the arm is holding
 							var tppc = target.getProcessedCargoCapacity(mineral)
 	#					If the ship is not purging that mineral
-							if dumpFilter.has(mineral):#!dumpFilter.has(mineral):
+							if mineral in dumpFilter:#!dumpFilter.has(mineral):
 	#						Leave the transfer buffer
 								onShip = processedCargoTransferBuffer
 
@@ -111,7 +111,7 @@ func _physics_process(delta):
 					for mineral in target_cargo:
 
 	#				If the ship is not purging that mineral
-						if dumpFilter.has(mineral):#!dumpFilter.has(mineral):
+						if mineral in dumpFilter:#!dumpFilter.has(mineral):
 	#					Capacity of the ship for that mineral
 							var tppc = ship.getProcessedCargoCapacity(mineral)
 	#					How much we want to put on the ship
