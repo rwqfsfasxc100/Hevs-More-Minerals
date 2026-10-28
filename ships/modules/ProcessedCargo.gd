@@ -92,7 +92,7 @@ func hmm_processed_cargo_scene_UV():
 func setMineralConfig(mineral:String, how:bool):
 	if mineralTargetting:
 		if how:
-			if not mineralConfig.has(mineral):
+			if not mineral in mineralConfig:
 				mineralConfig.append(mineral)
 		else :
 			mineralConfig.erase(mineral)
@@ -103,7 +103,7 @@ func setMineralConfig(mineral:String, how:bool):
 #Checks if the mineral is enabled, used by  the geologist menu to determine what buttons should be pressed
 func hasMineralEnabled(mineral)->bool:
 	if mineralTargetting:
-		return mineralConfig.has(mineral)
+		return mineral in mineralConfig
 	else :
 		return false
 
@@ -116,7 +116,7 @@ func _physics_process(delta):
 			var dump = true
 			for c in containers:
 				if Tool.claim(c):
-					if c.enabled and c.locked and c.mineralTargetting and c.mineralConfig.minerals.has(m):
+					if c.enabled and c.locked and c.mineralTargetting and m in c.mineralConfig.minerals:
 						if Tool.claim(c.target):
 							if c.target.getProcessedCargo(m) < c.target.getProcessedCargoCapacity(m):
 								dump = false
