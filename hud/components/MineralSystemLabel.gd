@@ -35,6 +35,6 @@ extends Node
 var moreminerals_minerallabel_uinit : bool = false
 func _ready():
 	if moreminerals_minerallabel_uinit:
-		OS.kill(OS.get_process_id())
+		ModLoader._savedObjects[0].main_modmain.log_double_load_error(get_script().resource_path)
 	moreminerals_minerallabel_uinit = true
 	get_child(0).connect("pressed", get_parent(), "toggleRow", [self])
