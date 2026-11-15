@@ -1,5 +1,5 @@
 # This translation file is generated automatically
-# Do not modify anything directly, as this will break things for translators
+# Do not modify anything directly, as this will cause the file to break for translators
 # Please use Translation Tracker to modify these yourself, and contact the mod author to implement them
 # https://github.com/rwqfsfasxc100/TranslationTracker/releases/latest
 
@@ -595,6 +595,60 @@ const TRANSLATIONS = {
 		"MOREMINERALS_CREDITS_CONTRIBUTORS_ZAKRIN": {
 			"string": "Za'krin - original mod this is built off of",
 			"version_hash": 1814566529
+		}
+	},
+	"zh_CN": {
+		"SYSTEM_CARGO_PROCESSED": {
+			"string": "加工货舱",
+			"version_hash": 2172244672
+		},
+		"MOREMINERALS_SECTION_ORE_HANDLING": {
+			"string": "加工矿石设置",
+			"version_hash": 3925917790
+		},
+		"MOREMINERALS_CONFIG_CARGO_BEHAVIOUR": {
+			"string": "货舱行为",
+			"version_hash": 799734593
+		},
+		"MOREMINERALS_CONFIG_CARGO_BEHAVIOUR_TOOLTIP": {
+			"string": "设置加工货舱的限制方式。\\n默认：使用原版行为，不限制矿物种类。\\n限制：只允许有限数量的矿物种类。\\n减少：允许所有矿物，但降低单种矿物容量以保持总容量不变。\\n动态：矿石可以溢出到其他储存槽，在限制种类的同时提高当前矿物的容量。",
+			"version_hash": 1321895305
+		},
+		"MOREMINERALS_CARGO_BEHAVIOUR_DEFAULT": {
+			"string": "默认",
+			"version_hash": 1765653610
+		},
+		"MOREMINERALS_CARGO_BEHAVIOUR_LIMITED": {
+			"string": "限制",
+			"version_hash": 3672591949
+		},
+		"MOREMINERALS_CARGO_BEHAVIOUR_REDUCED": {
+			"string": "减少",
+			"version_hash": 2664663041
+		},
+		"MOREMINERALS_CARGO_BEHAVIOUR_DYNAMIC": {
+			"string": "动态",
+			"version_hash": 2557840010
+		},
+		"MOREMINERALS_CARGO_BEHAVIOUR_MAX_TYPES": {
+			"string": "最大矿物种类",
+			"version_hash": 944637100
+		},
+		"MOREMINERALS_CONFIG_LEGACY_MINERAL_NAMES": {
+			"string": "使用旧版矿物名称",
+			"version_hash": 3124850998
+		},
+		"MOREMINERALS_CONFIG_LEGACY_MINERAL_NAMES_TOOLTIP": {
+			"string": "使用旧版模组中的 IMA 矿物缩写。",
+			"version_hash": 2266364166
+		},
+		"MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE": {
+			"string": "弹出加工矿石",
+			"version_hash": 126963998
+		},
+		"MOREMINERALS_CONFIG_EJECT_PROCESSED_ORE_RESET_FILTERS": {
+			"string": "重置弹出矿石筛选",
+			"version_hash": 1405606274
 		}
 	}
 }
