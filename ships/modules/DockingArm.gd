@@ -43,7 +43,7 @@ var has_loaded = false
 var moreminerals_cradleinitforcustom_uinit : bool = false
 func _ready():
 	if moreminerals_cradleinitforcustom_uinit:
-		ModLoader._savedObjects[0].main_modmain.log_double_load_error(get_script().resource_path)
+		ModLoader._savedObjects[0].log_double_load_error(get_script().resource_path)
 	moreminerals_cradleinitforcustom_uinit = true
 #	Set our transfer speed
 	hmmProcessedCargoTransferSpeed = processedCargoTransferSpeed
